@@ -1,0 +1,106 @@
+Now, let's create the missing button.css file:
+
+```css project="CSS Styles" file="css/button.css" type="code"
+/* button.css */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+}
+
+.btn-blue {
+    background-color: #3498db;
+    color: white;
+    box-shadow: 0 2px 4px rgba(52, 152, 219, 0.2);
+}
+
+.btn-blue:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.btn-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-effect:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease-out, height 0.3s ease-out;
+}
+
+.btn-effect:active:after {
+    width: 200px;
+    height: 200px;
+}
+
+/* Pricing buttons */
+.pricing-content .btn {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Language selector button */
+.language-selector button {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.language-selector button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown buttons */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2c3e50;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #34495e;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    .pricing-content .btn {
+        max-width: 100%;
+    }
+}
